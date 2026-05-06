@@ -64,7 +64,7 @@ body {
 
 .as-loader-logo {
   width: auto;
-  height: 56px;
+  height: clamp(72px, 10vw, 104px);
   object-fit: contain;
 }
 

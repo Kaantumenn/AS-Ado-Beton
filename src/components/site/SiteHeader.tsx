@@ -27,8 +27,8 @@ import { LanguageSelector } from "./LanguageSelector";
 import { cn } from "@/lib/cn";
 
 const accentText = "text-[#2596be]";
-const ONLINE_ISLEMLER_HREF = "https://odeme.ascimento.com.tr/";
-const AS_ADO_BETON_HREF = "https://asadobeton.com.tr";
+const ONLINE_ISLEMLER_HREF = "https://odeme.asadobeton.com.tr/";
+const AS_ADO_BETON_HREF = "https://as-cimento.vercel.app/";
 
 type SimpleNav = { label: string; href: string };
 type DropdownNav = {
@@ -553,8 +553,8 @@ export function SiteHeader() {
                 </h3>
                 <div className="mt-3 inline-flex rounded-lg border border-zinc-200/90 bg-white px-3 py-2 dark:border-zinc-700 dark:bg-zinc-800">
                   <Image
-                    src="/logo/as_ado_beton_logo.png"
-                    alt="AS ADO Beton"
+                    src="/logo/as_logo.webp"
+                    alt="AS Çimento"
                     width={190}
                     height={58}
                     className="h-10 w-auto object-contain"
@@ -564,7 +564,7 @@ export function SiteHeader() {
                   id="ado-confirm-desc"
                   className="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300"
                 >
-                  AS ADO Beton sayfasina yönlendirileceksiniz. Devam etmek istiyor musunuz?
+                  AS Çimento sayfasina yönlendirileceksiniz. Devam etmek istiyor musunuz?
                 </p>
                 <div className="mt-5 flex items-center justify-end gap-2">
                   <button

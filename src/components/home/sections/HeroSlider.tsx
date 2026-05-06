@@ -232,15 +232,7 @@ export function HeroSlider() {
             </button>
           </div>
 
-          <div className="absolute inset-x-0 bottom-20 z-30 flex items-center justify-center gap-3 px-4 sm:bottom-24 lg:justify-start lg:pl-16">
-            <button
-              type="button"
-              aria-label="Önceki görsel"
-              onClick={prevSlide}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/45 bg-black/22 text-white backdrop-blur-sm transition hover:bg-black/35"
-            >
-              <ArrowLeft className="h-4 w-4" />
-            </button>
+          <div className="absolute inset-x-0 bottom-20 z-30 flex items-center justify-center px-4 sm:bottom-24">
             <div className="flex items-center gap-2">
               {HERO_SLIDES.map((_, i) => (
                 <button
@@ -256,14 +248,6 @@ export function HeroSlider() {
                 />
               ))}
             </div>
-            <button
-              type="button"
-              aria-label="Sonraki görsel"
-              onClick={nextSlide}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/45 bg-black/22 text-white backdrop-blur-sm transition hover:bg-black/35"
-            >
-              <ArrowRight className="h-4 w-4" />
-            </button>
           </div>
 
           <AnimatePresence mode="wait" initial={false} custom={direction}>
