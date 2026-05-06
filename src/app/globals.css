@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+/* next-themes `html` üzerine `.dark` koyar; varsayılan Tailwind ise OS prefers-color-scheme
+   kullanır. OS koyu + sitede açık tema seçiliyken dark: sınıfları yanlışlıkla uygulanıyordu. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Light: tam beyaz yüzey; dark: mevcut koyu palet (next-themes .dark) */
+html {
+  color-scheme: light;
+  --background: #ffffff;
+  --foreground: #171717;
+  /* Bölümler arası çok hafif ton farkı (alternatif satırlar) */
+  --section: #ffffff;
+  --section-alt: #FAFAFA;
+  /* Çizgi ikonlar / oklar (Kurumsal panel vb.) */
+  --icon-brand: #0d3a5c;
+  --primary-blue: #38bdf8;
+  --secondary-blue: #102a45;
+  /* Koyu fotoğraf/gradient üzeri (kontrast) */
+  --icon-brand-on-dark: #93c5fd;
+}
+
+html.dark {
+  color-scheme: dark;
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --section: #0a0a0a;
+  --section-alt: #121212;
+  --icon-brand: #93c5fd;
+  --primary-blue: #38bdf8;
+  --secondary-blue: #102a45;
+  --icon-brand-on-dark: #bae6fd;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+.as-loader-screen {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  background: transparent;
+}
+
+.as-loader-logo-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.as-loader-logo {
+  width: auto;
+  height: 56px;
+  object-fit: contain;
+}
+
+.as-loader-logo-base {
+  opacity: 0.08;
+  filter: grayscale(1) brightness(1.2);
+}
+
+.as-loader-logo-reveal {
+  position: absolute;
+  inset: 0;
+  opacity: 1;
+  clip-path: inset(0 100% 0 0);
+  animation: as-loader-reveal 3.8s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+}
+
+.as-loader-sweep {
+  position: absolute;
+  inset: -24% -78%;
+  background: linear-gradient(
+    100deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0) 42%,
+    rgba(255, 255, 255, 0.96) 50%,
+    rgba(255, 255, 255, 0) 58%,
+    transparent 66%
+  );
+  mix-blend-mode: plus-lighter;
+  transform: translateX(-120%);
+  animation: as-loader-sweep 3.8s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+}
+
+@keyframes as-loader-sweep {
+  0% {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+}
+
+@keyframes as-loader-reveal {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  85% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+html.dark .as-loader-screen {
+  background: transparent;
+}
