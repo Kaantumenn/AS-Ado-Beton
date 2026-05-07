@@ -1,9 +1,6 @@
 "use client";
 
-import Image from "next/image";
 import {
-  ChartNoAxesColumnIncreasing,
-  Coins,
   Cylinder,
   Factory,
   Handshake,
@@ -19,18 +16,18 @@ import {
 } from "@/components/home/icons/PillarBrandIcons";
 import { cn } from "@/lib/cn";
 
-/** Arka plan: `public/photos/as-cimento-011.jpg` */
-const STATS_BG = "/photos/as-cimento-011.jpg";
+/** Arka plan video (otomatik oynatılır, sessiz, sonsuz döngü). */
+const STATS_BG_VIDEO = "/ado_banner_video.MOV";
+/** Video yüklenene kadar gösterilen poster görseli. */
+const STATS_BG_POSTER = "/photos/as_ado_banner4.png";
 
-type StatKey = "capital" | "people" | "truck" | "production" | "growth" | "storage";
+type StatKey = "people" | "facility" | "truck" | "concrete";
 
 const statIcons: Record<StatKey, LucideIcon> = {
-  capital: Coins,
   people: Users,
+  facility: Factory,
   truck: Truck,
-  production: Factory,
-  growth: ChartNoAxesColumnIncreasing,
-  storage: Cylinder,
+  concrete: Cylinder,
 };
 
 /** eased ∈ [0,1] → ekranda gösterilecek metin */
@@ -43,45 +40,31 @@ const stats: {
 }[] = [
   {
     id: "1",
-    label: "Yerli sermaye",
-    key: "capital",
+    label: "Personel sayısı",
+    key: "people",
     delayMs: 0,
-    format: (e) => `${Math.round(100 * e)}%`,
+    format: (e) => `${Math.round(300 * e)}+`,
   },
   {
     id: "2",
-    label: "Personel sayısı",
-    key: "people",
-    delayMs: 70,
-    format: (e) => `${Math.round(900 * e)}+`,
+    label: "İleri teknoloji tesis",
+    key: "facility",
+    delayMs: 90,
+    format: (e) => `${Math.round(16 * e)}+`,
   },
   {
     id: "3",
     label: "Günlük hammadde sevkiyatı",
     key: "truck",
-    delayMs: 140,
-    format: (e) => `${Math.round(20000 * e).toLocaleString("tr-TR")} ton`,
+    delayMs: 180,
+    format: (e) => `${Math.round(20 * e)}K Ton+`,
   },
   {
     id: "4",
-    label: "Yıllık klinker üretimi",
-    key: "production",
-    delayMs: 210,
-    format: (e) => `${(4.38 * e).toFixed(2).replace(".", ",")}M+`,
-  },
-  {
-    id: "5",
-    label: "İstikrarlı büyüme",
-    key: "growth",
-    delayMs: 280,
-    format: (e) => `${Math.round(70 * e)}%`,
-  },
-  {
-    id: "6",
-    label: "Çimento stok silo kapasitesi",
-    key: "storage",
-    delayMs: 350,
-    format: (e) => `${Math.round(45000 * e).toLocaleString("tr-TR")} ton`,
+    label: "Günlük hazır beton",
+    key: "concrete",
+    delayMs: 270,
+    format: (e) => `${Math.round(10 * e)}K m³+`,
   },
 ];
 
@@ -212,13 +195,15 @@ export function SectionStats() {
       className="relative isolate w-full overflow-hidden py-16 sm:py-20"
     >
       <div className="pointer-events-none absolute inset-0 -z-10 select-none">
-        <Image
-          src={STATS_BG}
-          alt=""
-          fill
-          className="object-cover object-center"
-          sizes="100vw"
-          priority={false}
+        <video
+          src={STATS_BG_VIDEO}
+          poster={STATS_BG_POSTER}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          className="absolute inset-0 h-full w-full object-cover object-center"
           aria-hidden
         />
         <div
@@ -234,17 +219,16 @@ export function SectionStats() {
       <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <header className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-[#0d3a5c] sm:text-4xl dark:text-sky-300">
-            Rakamlarla AS Çimento
+            Rakamlarla AS Ado Beton
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-zinc-600 sm:text-base dark:text-zinc-400">
-            AS Çimento olarak sektörde ticari performans, istihdam ve sürdürülebilir büyüme
-            odağımızla; rakamlarla anlaşılır, şeffaf bir özet sunuyoruz. Aşağıdaki
-            değerler temsilidir, güncel verileri kurumsal raporlarla
-            eşleştirebilirsiniz.
+            AS Ado Beton olarak; ticari başarılarımız, güçlü istihdam kapasitemiz ve
+            yüksek sevkiyat performansımızla sektörün öncüsü, yenilikçi ve hızla
+            büyüyen bir hazır beton kuruluşuyuz.
           </p>
         </header>
 
-        <ul className="mt-12 grid grid-cols-2 gap-3 sm:mt-14 sm:gap-4 lg:mt-16 lg:grid-cols-3 lg:gap-5 xl:mt-20 xl:grid-cols-6 xl:gap-4">
+        <ul className="mt-12 grid grid-cols-2 gap-3 sm:mt-14 sm:gap-4 lg:mt-16 lg:grid-cols-4 lg:gap-5 xl:mt-20 xl:gap-6">
           {stats.map((item) => {
             const Icon = statIcons[item.key];
             return (

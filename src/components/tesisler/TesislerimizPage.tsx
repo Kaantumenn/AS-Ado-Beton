@@ -28,7 +28,7 @@ const facilities: Facility[] = [
     phone: "-",
     gsm: "+90 530 276 59 92",
     fax: "-",
-    email: "info@ascimento.com.tr",
+    email: "info@asadobeton.com.tr",
     address: "Macun Mahallesi Isparta Caddesi No:92, Aksu / Antalya",
     image: "/aksu-tesis.jpg",
     mapUrl:
@@ -43,7 +43,7 @@ const facilities: Facility[] = [
     phone: "+90 (256) 577 21 01",
     gsm: "+90 540 717 26 26",
     fax: "-",
-    email: "info@ascimento.com.tr",
+    email: "info@asadobeton.com.tr",
     address: "Ortaklar Mahallesi 7 Eylül Caddesi No: 153/1, Germencik / Aydın",
     image: "/aydin-tesis.webp",
     mapUrl:

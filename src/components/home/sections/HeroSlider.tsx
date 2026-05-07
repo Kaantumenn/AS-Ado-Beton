@@ -18,6 +18,8 @@ function HeroBlueTitleText({ children }: { children: ReactNode }) {
 
 type HeroSlide = {
   image: string;
+  /** CSS `object-position` değeri (örn. `"center 25%"`, `"top"`). Varsayılan `"center"`. */
+  imagePosition?: string;
   eyebrow: string;
   titleStart: string;
   titleBlue: string;
@@ -33,7 +35,7 @@ type HeroSlide = {
 
 const HERO_SLIDES: HeroSlide[] = [
   {
-    image: "/photos/as-cimento-011.jpg",
+    image: "/photos/as_ado_banner1.png",
     eyebrow: "Hazır Beton Çözümleri",
     titleStart: "İLERİ TEKNOLOJİ,",
     titleBlue: "ÜSTÜN KALİTE",
@@ -56,7 +58,7 @@ const HERO_SLIDES: HeroSlide[] = [
     floatingImage: "/photos/aksu_tesisi.png",
   },
   {
-    image: "/photos/as-cimento-008.jpg",
+    image: "/photos/as_ado_banner2.png",
     eyebrow: "Güvenilir Tedarik Ağı",
     titleStart: "HIZLI SEVKİYAT,",
     titleBlue: "KESİNTİSİZ HİZMET",
@@ -79,7 +81,7 @@ const HERO_SLIDES: HeroSlide[] = [
     floatingImage: "/photos/altinova_tesisi.png",
   },
   {
-    image: "/photos/turkler_tesisi.png",
+    image: "/photos/as_ado_banner3.png",
     eyebrow: "Sürdürülebilir Üretim",
     titleStart: "GÜÇLÜ ALTYAPI,",
     titleBlue: "MODERN ÜRETİM",
@@ -99,6 +101,30 @@ const HERO_SLIDES: HeroSlide[] = [
       ["Yaklaşım", "Müşteri Odaklı Hizmet"],
     ],
     cardCta: "DETAYLI İNCELE",
+    floatingImage: "/photos/turkler_tesisi.png",
+  },
+  {
+    image: "/photos/aksu_tesisi.png",
+    imagePosition: "center 25%",
+    eyebrow: "Modern Üretim Tesisleri",
+    titleStart: "STRATEJİK KONUM,",
+    titleBlue: "GÜÇLÜ KAPASİTE",
+    description:
+      "Antalya genelinde konuşlanmış santrallerimizle her bölgeye hızlı ve kesintisiz hazır beton tedariki sağlıyoruz.",
+    ctaLabel: "TESİSLERİMİZİ İNCELE",
+    ctaHref: "/tesislerimiz",
+    stats: [
+      ["17", "Aktif Santral"],
+      ["1.500+", "m³/saat Kapasite"],
+      ["12", "Şehir Bölgesi"],
+    ],
+    cardTitle: "AKSU BETON SANTRALİ",
+    cardItems: [
+      ["Kapasite", "150 m³/saat"],
+      ["Teknoloji", "Otomatik Dozajlama"],
+      ["Lokasyon", "Antalya / Aksu"],
+    ],
+    cardCta: "TESİSİ İNCELE",
     floatingImage: "/photos/aksu_tesisi.png",
   },
 ];
@@ -157,7 +183,8 @@ export function HeroSlider() {
                 src={activeSlide.image}
                 alt="AS Çimento vitrin görseli"
                 fill
-                className="object-cover object-center"
+                className="object-cover"
+                style={{ objectPosition: activeSlide.imagePosition ?? "center" }}
                 priority
                 sizes="100vw"
               />

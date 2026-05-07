@@ -32,7 +32,7 @@ function ContactHeroWithCards() {
 
         <div className="relative mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8">
           <p className="text-center text-xs font-semibold tracking-[0.18em] text-(--primary-blue) uppercase">
-            AS Çimento
+            AS Ado Beton
           </p>
           <h1 className="mt-2 text-center text-4xl font-semibold tracking-tight text-zinc-900 sm:text-5xl dark:text-zinc-100">
             İletişim
@@ -55,14 +55,14 @@ function ContactHeroWithCards() {
               E-Posta
             </h2>
             <a
-              href="mailto:info@ascimento.com.tr"
+              href="mailto:info@asadobeton.com.tr"
               className="mt-1 block text-sm text-zinc-600 transition hover:text-(--primary-blue) dark:text-zinc-300 dark:hover:text-sky-300"
             >
-              info@ascimento.com.tr
+              info@asadobeton.com.tr
             </a>
             <div className="mt-4">
               <a
-                href="mailto:info@ascimento.com.tr"
+                href="mailto:info@asadobeton.com.tr"
                 className="inline-flex items-center text-(--primary-blue) transition hover:opacity-80 dark:text-sky-300"
                 aria-label="E-posta gönder"
               >
@@ -169,7 +169,7 @@ function ContactFormSection() {
       <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-6 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:gap-10 lg:px-8">
         <article className="rounded-2xl border border-zinc-200/80 bg-white p-6 shadow-[0_14px_40px_-28px_rgba(56,189,248,0.45)] dark:border-zinc-700/70 dark:bg-zinc-900">
           <p className="text-xs font-semibold uppercase tracking-[0.12em] text-zinc-500 dark:text-zinc-400">
-            AS Çimento
+            AS Ado Beton
           </p>
           <h2 className="mt-2 text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
             İletişim Bilgileri
@@ -333,7 +333,7 @@ function ContactMapSection() {
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="overflow-hidden rounded-2xl border border-zinc-200/80 shadow-[0_12px_36px_-24px_rgba(56,189,248,0.4)] dark:border-zinc-700">
           <iframe
-            title="AS Çimento Harita"
+            title="AS Ado Beton Harita"
             src="https://www.google.com/maps?q=AS%20Cimento%20Bucak&z=11&output=embed"
             className="h-[360px] w-full sm:h-[460px]"
             loading="lazy"

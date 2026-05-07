@@ -29,7 +29,7 @@ const awards: AwardItem[] = [
   {
     id: "2",
     year: "2007",
-    title: "AS Çimento — 2007 yılı bölge birinciliği plaketi",
+    title: "AS Ado Beton — 2007 yılı bölge birinciliği plaketi",
     image: "/awards-page/odul-1.png",
     source: "Türkiye Odalar ve Borsalar Birliği",
     fit: "contain",

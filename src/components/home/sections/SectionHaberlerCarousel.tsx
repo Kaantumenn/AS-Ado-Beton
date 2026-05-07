@@ -269,7 +269,7 @@ export function SectionHaberlerCarousel() {
           <div className="max-w-2xl space-y-4">
            
             <h2 className="text-balance text-2xl font-bold uppercase leading-tight tracking-tight sm:text-3xl lg:text-4xl">
-              AS ÇİMENTO&apos;DAN{" "}
+              AS ADO BETON&apos;DAN{" "}
               <span style={{ color: ACCENT }}>HABERLER</span> VE GELİŞMELER
             </h2>
           </div>

@@ -48,7 +48,7 @@ export function SiteFooter() {
           </div>
 
           <div className="space-y-3 text-left sm:text-right">
-            <h3 className="text-xl font-semibold tracking-tight sm:text-2xl">AS Çimento</h3>
+            <h3 className="text-xl font-semibold tracking-tight sm:text-2xl">AS Ado Beton</h3>
             <p className="text-sm text-zinc-200">
               Kızılkaya Beldesi, Avdan Mahallesi Maltaşı Mevkii (Küme Evler)
               <br />
@@ -65,8 +65,8 @@ export function SiteFooter() {
                 </a>
               </p>
               <p>
-                <a href="mailto:info@ascimento.com.tr" className="transition hover:text-sky-300">
-                  info@ascimento.com.tr
+                <a href="mailto:info@asadobeton.com.tr" className="transition hover:text-sky-300">
+                  info@asadobeton.com.tr
                 </a>
               </p>
             </div>
@@ -76,13 +76,13 @@ export function SiteFooter() {
         <div className="mt-10 border-t border-white/10 pt-6">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
-              <Link href="/" aria-label="AS Çimento anasayfa">
+              <Link href="/" aria-label="AS Ado Beton anasayfa">
                 <Image
-                  src="/logo/as_logo.webp"
-                  alt="AS Çimento"
-                  width={180}
-                  height={54}
-                  className="h-10 w-auto object-contain object-left"
+                  src="/logo/as_ado_beton_logo.png"
+                  alt="AS Ado Beton"
+                  width={280}
+                  height={84}
+                  className="h-16 w-auto object-contain object-left sm:h-20"
                 />
               </Link>
               <p className="max-w-xs text-xs leading-relaxed text-zinc-300">
@@ -101,7 +101,7 @@ export function SiteFooter() {
                   Gizlilik Politikası
                 </Link>
               </div>
-              <p>© 2026 AS Çimento. Tüm hakları saklıdır.</p>
+              <p>© 2026 AS Ado Beton. Tüm hakları saklıdır.</p>
               <p className="tracking-wide text-zinc-400/90">Prepared By Mahmut Kaan Tümen</p>
             </div>
           </div>

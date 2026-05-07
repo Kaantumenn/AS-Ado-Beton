@@ -20,8 +20,8 @@ import { cn } from "@/lib/cn";
 /** Panel arka planı (`public/photos/as-cimento-012.jpg`) */
 const PANEL_BG_IMAGE = "/photos/as-cimento-012.jpg";
 
-/** Kurumsal panel + site başlığı ile aynı: `public/logo/as_logo.webp` */
-const PANEL_LOGO_SRC = "/logo/as_logo.webp";
+/** Kurumsal panel logosu: `public/logo/as_ado_beton_logo.png` */
+const PANEL_LOGO_SRC = "/logo/as_ado_beton_logo.png";
 
 /** Görseldeki koyu mavi CTA + kart ikon/okları (Lucide stroke = currentColor) */
 const ctaBlue = "#0d3a5c";
@@ -194,13 +194,13 @@ export function SectionKurumsalPanel() {
             />
             <div className="relative z-10 flex h-full min-h-88 flex-col justify-between p-6 sm:p-8 lg:min-h-112 lg:p-10 lg:pl-12">
               <div className="flex max-w-xl flex-col items-start text-left">
-                <Link href="/" className="relative block h-11 w-44 shrink-0 sm:h-12 sm:w-52">
+                <Link href="/" className="relative block h-14 w-56 shrink-0 sm:h-16 sm:w-64">
                   <Image
                     src={PANEL_LOGO_SRC}
-                    alt="AS Çimento"
-                    width={220}
-                    height={64}
-                    className="h-11 w-auto max-w-54 object-contain object-left sm:h-12 sm:max-w-60"
+                    alt="AS Ado Beton"
+                    width={280}
+                    height={84}
+                    className="h-14 w-auto max-w-64 object-contain object-left sm:h-16 sm:max-w-72"
                     priority={false}
                   />
                 </Link>

@@ -22,8 +22,8 @@ const logoFont = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "AS Çimento — Ana sayfa",
-  description: "AS Çimento — sürdürülebilir atık yönetimi ve enerji",
+  title: "AS Ado Beton — Ana sayfa",
+  description: "AS Ado Beton — sürdürülebilir atık yönetimi ve enerji",
 };
 
 export default function RootLayout({

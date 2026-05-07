@@ -80,10 +80,10 @@ export function SiteFooter() {
             <li className="flex items-center gap-2.5 text-sm text-zinc-200/90">
               <Mail className="h-4 w-4 shrink-0 text-sky-300" strokeWidth={1.9} />
               <a
-                href="mailto:info@ascimento.com.tr"
+                href="mailto:info@asadobeton.com.tr"
                 className="underline decoration-zinc-300/60 underline-offset-2 transition hover:text-sky-300"
               >
-                info@ascimento.com.tr
+                info@asadobeton.com.tr
               </a>
             </li>
           </ul>
